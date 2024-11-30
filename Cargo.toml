@@ -1,0 +1,38 @@
+[package]
+name = "hello-wasm"
+version = "0.1.0"
+authors = ["Ashley Williams <ashley666ashley@gmail.com>"]
+description = "babby's first wasm package"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ashleygwilliams/hello-wasm"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+hex_color = "3.0.0"
+once_cell = "1.20.2"
+wasm-bindgen="0.2.95"
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'console',
+  'DomMatrix',
+  'SvgMatrix',
+  'SvgsvgElement',
+  'Document',
+  'Element',
+  'ImageData',
+  'HtmlElement',
+  'HtmlImageElement',
+  'OffscreenCanvas',
+  'HtmlCanvasElement',
+  'CanvasRenderingContext2d',
+  'OffscreenCanvasRenderingContext2d',
+  'CanvasGradient',
+  'CanvasPattern',
+  'Node',
+  'Window',
+]
